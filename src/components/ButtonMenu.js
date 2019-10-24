@@ -7,18 +7,19 @@ const ButtonMenu = () => {
     const [globalState, globalActions] = useGlobal();
     return (
         <Styled.ButtonMenu>
-            <button type="button" onClick={() => globalActions.increaseAmount(1)}>
+            <button type="button" onClick={() => globalActions.mainmenu.increaseAmount(1)}>
                 Increase add Amount
             </button>
-            <button type="button" onClick={() => globalActions.decreaseAmount(1)}>
+            <button type="button" onClick={() => globalActions.mainmenu.decreaseAmount(1)}>
                 Decrease add Amount
             </button>
-            <button type='button' onClick={() => globalActions.addToCounter(parseInt(`${globalState.amount}`))}>
+            <button type='button' onClick={() => globalActions.mainmenu.addToCounter(parseInt(`${globalState.amount}`))}>
                 {globalState.amount >= 0 ? `+${globalState.amount}` : `${globalState.amount}`}
             </button>
-            <button type='button' onClick={() => globalActions.resetAmount(0)}>
+            <button type='button' onClick={() => globalActions.mainmenu.resetAmount(0)}>
                 reset amount counter to 0
             </button>
+            <button type="button" onClick={() => globalActions.mainmenu.showAdvancedSettings()}>Advanced Settings</button>
         </Styled.ButtonMenu>
     )
 }
