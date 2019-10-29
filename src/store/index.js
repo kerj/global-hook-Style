@@ -7,6 +7,8 @@ const initialState = {
   counter: 0,
   amount: 0,
   setting: false,
+  poison: false,
+  poisonCounter: 0,
 };
 
 const useGlobal = useGlobalHook(React, initialState, actions);

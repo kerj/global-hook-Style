@@ -11,6 +11,13 @@ const Counter = () => {
                 Counter:
                 {globalState.counter}
             </h1>
+            {
+            globalState.poison ?
+             <h1>
+                Poison Counter: 
+                {globalState.poisonCounter}
+            </h1> : null
+            }
         </Styled.Counter>
     )
 }

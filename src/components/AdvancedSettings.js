@@ -14,6 +14,8 @@ const AdvancedSettings = () => {
         globalState.setting ?
          <Styled.ButtonMenu>
              <h1>Settings</h1>
+             <h3>Show Poison Counter:</h3>
+             <button onClick={() => {globalActions.mainmenu.activatePoisonCount()}}></button>
         </Styled.ButtonMenu> : null
     )
 }
